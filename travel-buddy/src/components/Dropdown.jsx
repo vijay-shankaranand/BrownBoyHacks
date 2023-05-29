@@ -1,10 +1,30 @@
 import { useState } from "react";
 import dropDownIcon from "../images/down.svg";
 
-const Dropdown = ({ title, listOfitems, width }) => {
+const Dropdown = ({ title, listOfitems }) => {
     
     const [searchTerm, setSearchTerm] = useState('');
     const [clicked, setClicked] = useState(false);
+
+    let searchedList = undefined;
+
+    if (searchTerm === '') {
+        searchedList = listOfitems;
+    } else {
+        searchedList = listOfitems.filter(x => x.toLowerCase() === searchTerm.toLowerCase());
+    }
+
+    const dropper = () => {
+        if (clicked) {
+            return (listOfitems.map(x => (
+                <div className="dropdown-item">{x}</div>
+                )));
+        } else if (searchTerm.length > 1) {
+            return (searchedList.map(x => (
+                <div className="dropdown-item">{x}</div>
+                )));
+        }
+    }
 
     return ( 
         <div className="dropdown-container">
@@ -23,14 +43,14 @@ const Dropdown = ({ title, listOfitems, width }) => {
             
             {console.log(searchTerm)}
 
-            {clicked && (
+            {/* {clicked && (
 
                 listOfitems.map(x => (
                 <div className="dropdown-item">{x}</div>
                 ))
-                
-                
-            )}
+            )} */}
+
+            {dropper()}
         </div>
      );
 }
