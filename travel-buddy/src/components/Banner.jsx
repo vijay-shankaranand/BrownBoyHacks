@@ -2,7 +2,7 @@ import familyImage from '../images/family.jpg';
 
 const Banner = () => {
     return ( 
-        <div className='banner'>
+        <div className='banner' style={{marginBottom: 50}}>
             <img src={familyImage}/>
             <div>
                 <h2 style={{ textAlign: 'center', width: '300px' }}>This could be your family!</h2>

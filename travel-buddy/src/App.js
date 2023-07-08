@@ -5,10 +5,12 @@ import Planner from './components/Planner';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div className="App" style={{ backgroundColor: '#E7D2CC' }}>
+     <div className="navbar-and-planner" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%' }}>
+        <NavBar />
+        <Planner />
+      </div>
       <Banner />
-      <Planner />
     </div>
   );
 }

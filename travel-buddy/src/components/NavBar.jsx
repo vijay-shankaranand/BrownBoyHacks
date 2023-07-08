@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return ( 
-        <div className="navbar">
-            <h1>Travel Buddy</h1>
+        
+        <div className="navbar" style={{backgroundColor: '#EEEDE7'}}>
+            <h1 style={{}}>Travel Buddy</h1>
             <nav>
                 <p>Home</p>
                 <p>Explore Flights</p>

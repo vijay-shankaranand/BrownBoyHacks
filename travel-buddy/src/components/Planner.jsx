@@ -2,7 +2,7 @@ import Dropdown from "./Dropdown";
 
 const Planner = () => {
 
-    const foodOptions = ["Halal", "Non-Halal"];
+    const foodOptions = ["Halal", "Vegetarian", "Vegan"];
 
     const interestOptions = ["Museum", "Clubbing", "Historic Sites"];
 
@@ -10,7 +10,7 @@ const Planner = () => {
 
 
     return ( 
-        <div className="planner">
+        <div className="planner" style={{backgroundColor: '#EEEDE7'}}>
             <Dropdown title="Food" listOfitems={foodOptions}/>
             <Dropdown title="Interests" listOfitems={interestOptions}/>
             <Dropdown title="Budget" listOfitems={budgetOptions}/>
